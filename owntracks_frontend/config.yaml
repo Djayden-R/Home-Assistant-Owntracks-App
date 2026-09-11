@@ -1,17 +1,14 @@
 name: "OwnTracks Frontend"
-version: "0.0.12"
+version: "0.0.13"
 slug: "owntracks_frontend"
 description: "Advanced web interface for OwnTracks to visualize your location data on a map."
 arch:
   - aarch64
   - amd64
 init: false
-options:
-  SERVER_HOST: "192.168.178.171"
-  SERVER_PORT: 8083
-schema:
-  SERVER_HOST: str
-  SERVER_PORT: port
 webui: "http://[HOST]:[PORT:80]/"
 ports:
   80/tcp: 8084
+environment:
+  SERVER_HOST: "192.168.178.171"
+  SERVER_PORT: "8083"
