@@ -13,8 +13,8 @@ RUN echo '#!/bin/sh' > /entrypoint.sh && \
     echo 'export OTR_USER=$(jq -r ".otr_user" /data/options.json)' >> /entrypoint.sh && \
     echo 'export OTR_PASS=$(jq -r ".otr_pass" /data/options.json)' >> /entrypoint.sh && \
     echo 'echo "[DEBUG] MQTT host: ${OTR_HOST}"' >> /entrypoint.sh && \
-    echo 'echo "[DEBUG] MQTT user configured: $([ -n "${OTR_USER}" ] && echo yes || echo no)"' >> /entrypoint.sh && \
-    echo 'echo "[DEBUG] MQTT password configured: $([ -n "${OTR_PASS}" ] && echo yes || echo no)"' >> /entrypoint.sh && \
+    echo 'echo "[DEBUG] MQTT username: ${OTR_USER}"' >> /entrypoint.sh && \
+    echo 'echo "[DEBUG] MQTT password: ${OTR_PASS}"' >> /entrypoint.sh && \
     echo 'echo "[DEBUG] Starting /usr/sbin/ot-recorder"' >> /entrypoint.sh && \
     echo 'exec /usr/sbin/ot-recorder' >> /entrypoint.sh && \
     chmod +x /entrypoint.sh
