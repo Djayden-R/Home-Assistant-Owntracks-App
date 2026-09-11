@@ -5,7 +5,6 @@ slug: "owntracks_recorder"
 arch:
   - aarch64
   - amd64
-image: owntracks/recorder
 startup: services
 boot: auto
 
@@ -31,9 +30,3 @@ schema:
   otr_port: int
   otr_user: str?
   otr_pass: password?
-
-environment:
-    OTR_HOST: otr_host
-    OTR_PORT: otr_port
-    OTR_USER: otr_user
-    OTR_PASS: otr_pass
