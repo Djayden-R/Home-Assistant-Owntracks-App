@@ -9,6 +9,7 @@ RUN echo '#!/bin/sh' > /my-start.sh && \
 	echo 'export SERVER_PORT="$(jq -r ".server_port" /data/options.json)"' >> /my-start.sh && \
 	echo 'echo "[DEBUG] Frontend backend host: ${SERVER_HOST}"' >> /my-start.sh && \
 	echo 'echo "[DEBUG] Frontend backend port: ${SERVER_PORT}"' >> /my-start.sh && \
+	echo 'echo "window.config = { SERVER_HOST: \"\${SERVER_HOST}\", SERVER_PORT: \${SERVER_PORT} };" > /usr/share/nginx/html/config/config.js' >> /my-start.sh && \
 	echo 'exec /docker-entrypoint.sh nginx -g "daemon off;"' >> /my-start.sh && \
 	chmod +x /my-start.sh
 
