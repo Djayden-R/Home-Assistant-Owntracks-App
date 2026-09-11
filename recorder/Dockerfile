@@ -1,8 +1,8 @@
+ARG BUILD_FROM=alpine:latest
 FROM owntracks/recorder:latest
 
-RUN apk add --no-cache jq
+# Environment variables mapping configuration options to the container
+ENV OTR_HOST=core-mosquitto
 
-COPY run.sh /run.sh
-RUN chmod a+x /run.sh
-
-ENTRYPOINT [ "/run.sh" ]
+# Expose the default UI and API port
+EXPOSE 8083
