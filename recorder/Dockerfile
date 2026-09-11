@@ -1,8 +1,9 @@
 ARG BUILD_FROM=alpine:latest
 FROM owntracks/recorder:latest
 
-# Environment variables mapping configuration options to the container
+# Map Home Assistant options to container environment variables
 ENV OTR_HOST=core-mosquitto
+ENV OTR_USER=otr_user
+ENV OTR_PASS=otr_pass
 
-# Expose the default UI and API port
 EXPOSE 8083

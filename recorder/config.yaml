@@ -1,5 +1,5 @@
 name: "OwnTracks Recorder"
-version: "0.0.6"
+version: "0.0.7"
 slug: "owntracks_recorder"
 description: "Backend for the OwnTracks apps to store and visualize location data."
 arch:
@@ -10,8 +10,12 @@ arch:
 init: false
 options:
   otr_host: "core-mosquitto"
+  otr_user: "your_mqtt_username"
+  otr_pass: "your_mqtt_password"
 schema:
   otr_host: str
+  otr_user: str
+  otr_pass: str
 ports:
   8083/tcp: 8083
 map:
