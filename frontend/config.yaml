@@ -1,5 +1,5 @@
 name: "OwnTracks Frontend"
-version: "latest"
+version: "0.0.1"
 slug: "ownt_frontend"
 description: "Advanced web interface for OwnTracks to visualize your location data on a map."
 arch:
