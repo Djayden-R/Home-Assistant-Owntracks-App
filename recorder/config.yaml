@@ -27,18 +27,10 @@ options:
     otr_pass: "mqtt_pass"
 
 schema:
-  otr_host:
-    type: str
-    description: "The hostname or IP address of the MQTT broker."
-  otr_port:
-    type: int
-    description: "The port number of the MQTT broker."
-  otr_user:
-    type: str?
-    description: "The username for authenticating with the MQTT broker."
-  otr_pass:
-    type: str?
-    description: "The password for authenticating with the MQTT broker."
+  otr_host: str
+  otr_port: int
+  otr_user: str?
+  otr_pass: password?
 
 environment:
     OTR_HOST: otr_host
