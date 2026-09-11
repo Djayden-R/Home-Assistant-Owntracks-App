@@ -1,5 +1,5 @@
 name: "OwnTracks Recorder"
-version: "0.0.8"
+version: "0.0.9"
 slug: "owntracks_recorder"
 description: "Backend for the OwnTracks apps to store and visualize location data."
 arch:
