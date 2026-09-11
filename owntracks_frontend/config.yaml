@@ -1,5 +1,5 @@
 name: "OwnTracks Frontend"
-version: "0.0.10"
+version: "0.0.6"
 slug: "owntracks_frontend"
 description: "Advanced web interface for OwnTracks to visualize your location data on a map."
 arch:
@@ -7,11 +7,11 @@ arch:
   - amd64
 init: false
 options:
-  server_host: "owntracks_recorder"
-  server_port: 8083
+  SERVER_HOST: "192.168.178.171"
+  SERVER_PORT: 8083
 schema:
-  server_host: str
-  server_port: port
+  SERVER_HOST: str
+  SERVER_PORT: port
 webui: "http://[HOST]:[PORT:80]/"
 ports:
   80/tcp: 8084
