@@ -11,10 +11,8 @@ RUN echo '#!/bin/sh' > /my-start.sh && \
 	echo '[ -z "${SERVER_PORT}" ] && export SERVER_PORT="8083"' >> /my-start.sh && \
 	echo 'echo "[DEBUG] Frontend backend host: ${SERVER_HOST}"' >> /my-start.sh && \
 	echo 'echo "[DEBUG] Frontend backend port: ${SERVER_PORT}"' >> /my-start.sh && \
-	echo 'if [ -f /docker-entrypoint.d/40-envsubst-on-templates.sh ]; then /docker-entrypoint.d/40-envsubst-on-templates.sh; fi' >> /my-start.sh && \
-	echo 'if [ -f /docker-entrypoint.d/20-envsubst-on-templates.sh ]; then /docker-entrypoint.d/20-envsubst-on-templates.sh; fi' >> /my-start.sh && \
 	echo 'echo "window.config = { SERVER_HOST: \"\${SERVER_HOST}\", SERVER_PORT: \${SERVER_PORT} };" > /usr/share/nginx/html/config/config.js' >> /my-start.sh && \
-	echo 'exec /docker-entrypoint.sh nginx -g "daemon off;"' >> /my-start.sh && \
+	echo 'exec /docker-entrypoint.sh' >> /my-start.sh && \
 	chmod +x /my-start.sh
 
 EXPOSE 80
