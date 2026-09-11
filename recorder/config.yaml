@@ -1,6 +1,6 @@
 name: "Owntracks Recorder"
 description: "A lightweight program for storing and accessing location data published via MQTT by the OwnTracks apps."
-version: "0.0.3"
+version: "0.0.4"
 slug: "owntracks_recorder"
 arch:
   - aarch64
